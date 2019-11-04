@@ -4,13 +4,13 @@ const HomeButtons = props => {
   return (
     <div className='homeButtons'>
       <button
-        onClick={() => props.setLionsScore(props.lionsScore + 7)}
+        onClick={() => props.handleScore("lions", 7)}
         className='homeButtons__touchdown'
       >
         Home Touchdown
       </button>
       <button
-        onClick={() => props.setLionsScore(props.lionsScore + 3)}
+        onClick={() => props.handleScore("lions", 3)}
         className='homeButtons__fieldGoal'
       >
         Home Field Goal
