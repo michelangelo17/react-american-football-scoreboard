@@ -7,13 +7,13 @@ const QuarterButton = props => {
     props.setQuarter(props.quarter + 1)
   }
   return (
-    <div className="buttons">
-    <button 
-      onClick={() => quarterHandler()}
-      className="quarterButton"
-    >
-      Change Quarter
-    </button>
+    <div>
+      <button 
+        onClick={() => quarterHandler()}
+        className="quarterButton"
+      >
+        Change Quarter
+      </button>
     </div>
   )
 }

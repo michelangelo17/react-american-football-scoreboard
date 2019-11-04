@@ -11,7 +11,7 @@ const Scoreboard = (props) => {
         <div className='timer'>00:03</div>
         <AwayScore tigersScore={props.tigersScore} />
       </div>
-      <BottomRow quarter={props.quarter} />
+      <BottomRow quarter={props.quarter} down={props.down} />
     </section>
   );
 };
