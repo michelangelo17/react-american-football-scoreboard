@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import './App.css';
 import Scoreboard from '../Scoreboard/Scoreboard';
-import Buttons from '../Inputs/Buttons';
+import AllInputs from '../Inputs/AllInputs';
 
 const App = () => {
   const [lionsScore, setLionsScore] = useState(0);
   const [tigersScore, setTigersScore] = useState(0);
   const [quarter, setQuarter] = useState(1);
   const [down, setDown] = useState(1);
+  const [toGo, setToGo] = useState(10);
+  const [ballOn, setBallOn] = useState(20);
   return (
     <div className='container'>
       <Scoreboard 
@@ -15,8 +17,10 @@ const App = () => {
         tigersScore={tigersScore} 
         quarter={quarter} 
         down={down}
+        toGo={toGo}
+        ballOn={ballOn}
       />
-      <Buttons
+      <AllInputs
         lionsScore={lionsScore}
         tigersScore={tigersScore}
         setLionsScore={setLionsScore}
@@ -25,6 +29,8 @@ const App = () => {
         setQuarter={setQuarter}
         down={down}
         setDown={setDown}
+        setToGo={setToGo}
+        setBallOn={setBallOn}
       />
     </div>
   );

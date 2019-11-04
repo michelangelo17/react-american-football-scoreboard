@@ -1,6 +1,8 @@
 import React from 'react';
-import QuarterButton from '../../QuarterButton';
+import QuarterButton from './QuarterButton';
 import DownButton from './DownButton';
+import BallOnInput from './BallOnInput';
+import ToGoInput from './ToGoInput';
 
 const BoardInputs = props => {
   return (
@@ -10,10 +12,14 @@ const BoardInputs = props => {
           down={props.down}
           setDown={props.setDown}
         />
-        {/* <ToGoInput /> */}
+        <ToGoInput 
+          setToGo={props.setToGo}
+        />
       </div>
       <div>
-        {/* <BallOnInput /> */}
+        <BallOnInput 
+          setBallOn={props.setBallOn}
+        />
         <QuarterButton 
           quarter={props.quarter}
           setQuarter={props.setQuarter}

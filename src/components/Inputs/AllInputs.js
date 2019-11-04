@@ -3,7 +3,7 @@ import HomeButtons from './HomeButtons';
 import AwayButtons from './AwayButtons';
 import BoardInputs from './BoardInputs';
 
-const Buttons = props => {
+const AllInputs = props => {
   const handleScore = (team, amount) => {
     team === "lions" ? 
     props.setLionsScore(props.lionsScore + amount) :
@@ -20,6 +20,8 @@ const Buttons = props => {
         setQuarter={props.setQuarter}
         down={props.down}
         setDown={props.setDown}
+        setToGo={props.setToGo}
+        setBallOn={props.setBallOn}
       />
       <AwayButtons
         tigersScore={props.tigersScore}
@@ -29,4 +31,4 @@ const Buttons = props => {
   );
 };
 
-export default Buttons;
+export default AllInputs;
