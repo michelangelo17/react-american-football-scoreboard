@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeButtons from './HomeButtons';
 import AwayButtons from './AwayButtons';
+import QuarterButton from './QuarterButton';
 
 const Buttons = props => {
   const handleScore = (team, amount) => {
@@ -13,6 +14,10 @@ const Buttons = props => {
       <HomeButtons
         lionsScore={props.lionsScore}
         handleScore={handleScore}
+      />
+      <QuarterButton 
+        quarter={props.quarter}
+        setQuarter={props.setQuarter}
       />
       <AwayButtons
         tigersScore={props.tigersScore}
